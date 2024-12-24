@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
+	"github.com/google/uuid"
 	"github.com/gorilla/mux"
 )
 
@@ -89,6 +90,7 @@ func addCustomer(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	newCustomer.ID = uuid.New().String()
 	customers[newCustomer.ID] = newCustomer
 
 	w.WriteHeader(http.StatusCreated)

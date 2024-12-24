@@ -20,7 +20,7 @@ type Customer struct {
 }
 
 var customer1 = Customer{
-	ID:        "01",
+	ID:        uuid.New().String(),
 	Name:      "Tyler",
 	Role:      "Prospective",
 	Email:     "tzyoung@valdosta.edu",
@@ -29,7 +29,7 @@ var customer1 = Customer{
 }
 
 var customer2 = Customer{
-	ID:        "02",
+	ID:        uuid.New().String(),
 	Name:      "Josh",
 	Role:      "Premium",
 	Email:     "tzyoung@valdosta.edu",
@@ -37,7 +37,7 @@ var customer2 = Customer{
 	Contacted: false,
 }
 var customer3 = Customer{
-	ID:        "03",
+	ID:        uuid.New().String(),
 	Name:      "Easton",
 	Role:      "Online",
 	Email:     "tzyoung@valdosta.edu",
